@@ -27,7 +27,6 @@ import ContactForm from "./global/pages/Contact";
 import Footer from "./global/pages/Footer";
 import SplashScreen from "./components/loading/SplashScreen";
 import AboutMe from "./components/animation/AboutMe";
-import LeetCodeSubmissionsChart from "./components/display/charts/LeetCodeSubmissionsChart";
 
 export const ThemeContext = React.createContext<Theme>(tokens(ThemeMode.LIGHT));
 
