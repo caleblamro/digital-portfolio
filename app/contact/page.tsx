@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   ArrowUpRight,
-  Calendar,
   FileText,
   Github,
   Linkedin,
@@ -10,40 +9,33 @@ import {
 
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
+import { CopyEmailButton } from "@/components/copy-email-button";
+
+const EMAIL = "caleblamro@gmail.com";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Email is the fastest channel.",
 };
 
-const channels = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "caleblamro@gmail.com",
-    href: "mailto:caleblamro@gmail.com",
-    description: "Best for project inquiries.",
-  },
+const secondary = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "in/caleb-lamoreaux",
+    value: "caleb-lamoreaux",
     href: "https://www.linkedin.com/in/caleb-lamoreaux/",
-    description: "Connect or DM.",
   },
   {
     icon: Github,
     label: "GitHub",
     value: "caleblamro",
     href: "https://github.com/caleblamro",
-    description: "Open source and side projects.",
   },
   {
     icon: FileText,
     label: "Résumé",
     value: "Download PDF",
     href: "/files/Resume.pdf",
-    description: "Kept in sync with this site.",
   },
 ];
 
@@ -54,18 +46,51 @@ export default function ContactPage() {
         eyebrow="/ contact"
         title="Let's build something."
         description="Greenfield product, stuck migration, AI integration — email me."
-      >
-        <Button asChild size="lg">
-          <a href="mailto:caleblamro@gmail.com">
-            <Mail className="h-4 w-4" /> caleblamro@gmail.com
-          </a>
-        </Button>
-      </PageHero>
+      />
 
-      <section className="border-b border-border py-20">
-        <div className="container">
-          <div className="grid gap-5 md:grid-cols-2">
-            {channels.map((c) => {
+      <section className="py-20">
+        <div className="container max-w-4xl">
+          {/* Email focal point */}
+          <div className="relative overflow-hidden rounded-3xl border border-accent/40 bg-card p-10 shadow-[0_30px_80px_-40px_hsl(var(--accent)/0.45)] md:p-14">
+            <div className="absolute inset-0 -z-10 grid-pattern opacity-[0.08]" />
+            <div className="pointer-events-none absolute -right-32 -top-32 -z-10 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-80 w-80 rounded-full bg-frost/15 blur-3xl" />
+
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-accent">
+                Fastest channel · replies in 24h
+              </p>
+            </div>
+
+            <a
+              href={`mailto:${EMAIL}`}
+              className="mt-6 block font-display text-3xl font-bold tracking-tight transition-colors hover:text-accent sm:text-4xl md:text-5xl lg:text-6xl"
+            >
+              {EMAIL}
+            </a>
+
+            <p className="mt-5 max-w-xl text-muted-foreground">
+              Project work, advisory, hiring chats — all read personally. The
+              more concrete the ask, the faster the reply.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Button asChild size="lg">
+                <a href={`mailto:${EMAIL}`}>
+                  <Mail className="h-4 w-4" /> Send email
+                </a>
+              </Button>
+              <CopyEmailButton email={EMAIL} />
+            </div>
+          </div>
+
+          {/* Secondary channels */}
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            {secondary.map((c) => {
               const Icon = c.icon;
               const external = c.href.startsWith("http");
               return (
@@ -74,75 +99,26 @@ export default function ContactPage() {
                   href={c.href}
                   target={external ? "_blank" : undefined}
                   rel={external ? "noreferrer" : undefined}
-                  className="group relative flex items-start gap-5 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_60px_-30px_hsl(var(--accent)/0.35)] cursor-pointer"
+                  className="group flex items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 cursor-pointer"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                          {c.label}
-                        </p>
-                        <p className="mt-1 font-display text-xl font-semibold">
-                          {c.value}
-                        </p>
-                      </div>
-                      <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-all duration-200 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <div className="flex items-center gap-3">
+                    <Icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                    <div>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                        {c.label}
+                      </p>
+                      <p className="mt-0.5 font-display text-sm font-semibold">
+                        {c.value}
+                      </p>
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {c.description}
-                    </p>
                   </div>
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-all duration-200 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               );
             })}
           </div>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            <Info
-              icon={Calendar}
-              label="Response time"
-              value="Within 24 hours, weekdays."
-            />
-            <Info
-              icon={Mail}
-              label="Best for"
-              value="Project work, advisory, hiring chats."
-            />
-            <Info
-              icon={Github}
-              label="Exploring"
-              value="Agent runtime design and AI-first UX."
-            />
-          </div>
         </div>
       </section>
     </>
-  );
-}
-
-function Info({
-  icon: Icon,
-  label,
-  value,
-}: {
-  icon: React.ElementType;
-  label: string;
-  value: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-border bg-card/60 p-5">
-      <div className="flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-accent">
-          <Icon className="h-4 w-4" />
-        </div>
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          {label}
-        </span>
-      </div>
-      <p className="mt-3 text-sm font-medium leading-relaxed">{value}</p>
-    </div>
   );
 }
