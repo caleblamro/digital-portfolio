@@ -1,8 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Cloud,
+  Code2,
+  Layers,
+  Sparkles,
+  TerminalSquare,
+} from "lucide-react";
 
 import { skills } from "@/lib/experience";
+
+const iconMap: Record<string, React.ElementType> = {
+  Languages: TerminalSquare,
+  Frameworks: Layers,
+  "AI & Data": Sparkles,
+  Infrastructure: Cloud,
+};
 
 export function Skills() {
   return (
@@ -19,37 +33,50 @@ export function Skills() {
             <p className="mt-4 text-muted-foreground">
               Boring where boring works. Modern where it earns its keep.
             </p>
+
+            <div className="mt-8 inline-flex items-center gap-2 rounded-lg border border-border bg-card/40 px-3 py-2">
+              <Code2 className="h-3.5 w-3.5 text-accent" />
+              <span className="text-xs text-foreground/80">
+                Type-safe by default
+              </span>
+            </div>
           </div>
 
           <div className="lg:col-span-8">
-            <dl className="space-y-8">
-              {skills.map((group, i) => (
-                <motion.div
-                  key={group.category}
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="grid gap-3 border-b border-border pb-8 last:border-b-0 last:pb-0 sm:grid-cols-12"
-                >
-                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground sm:col-span-3">
-                    {group.category}
-                  </dt>
-                  <dd className="sm:col-span-9">
-                    <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {skills.map((group, i) => {
+                const Icon = iconMap[group.category] ?? Layers;
+                return (
+                  <motion.div
+                    key={group.category}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                    className="group rounded-2xl border border-border bg-card p-5 transition-colors duration-200 hover:border-accent/40"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                        <Icon className="h-4 w-4" />
+                      </div>
+                      <h3 className="font-display text-base font-semibold">
+                        {group.category}
+                      </h3>
+                    </div>
+                    <ul className="mt-4 flex flex-wrap gap-1.5">
                       {group.items.map((item) => (
                         <li
                           key={item}
-                          className="font-mono text-foreground/85"
+                          className="rounded-md border border-border/60 bg-background/60 px-2 py-1 font-mono text-[11px] text-foreground/80 transition-colors duration-200 group-hover:border-accent/30"
                         >
                           {item}
                         </li>
                       ))}
                     </ul>
-                  </dd>
-                </motion.div>
-              ))}
-            </dl>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
