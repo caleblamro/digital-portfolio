@@ -10,7 +10,7 @@ const items = [
     label: "Day job",
     title: "On Q Property Management",
     description:
-      "Lead engineer across financial reporting infrastructure, AI dev-agent tooling, and a portfolio of process-automation systems.",
+      "Lead engineer at On Q. Built the platform every new product is built on, replaced an entire ops role with AI automation, and train the leadership team on practical AI use.",
     href: "/experience",
   },
   {
