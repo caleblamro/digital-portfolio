@@ -196,7 +196,7 @@ export function Contributions() {
           className="mt-6 overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-8"
         >
           {mounted ? (
-            <div className="[&_article]:!w-full [&_svg.react-activity-calendar__calendar]:!w-full [&_svg.react-activity-calendar__calendar]:!h-auto">
+            <div className="[&_article]:!w-full [&_svg.react-activity-calendar__calendar]:!w-full [&_svg.react-activity-calendar__calendar]:!h-auto [&_.react-activity-calendar__legend-colors]:hidden">
               <GitHubCalendar
                 username={USERNAME}
                 colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
@@ -207,6 +207,7 @@ export function Contributions() {
                 fontSize={12}
                 transformData={transformData}
                 labels={{ totalCount: "{{count}} contributions" }}
+                showColorLegend={false}
                 style={{
                   color: "hsl(var(--muted-foreground))",
                   width: "100%",
