@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 
 const rotatingRoles = [
   { verb: "building", subject: "Doorline" },
-  { verb: "leading", subject: "engineering at On Q" },
-  { verb: "shipping", subject: "Forge with Triforce" },
+  { verb: "leading", subject: "On Q engineering" },
+  { verb: "shipping", subject: "Forge" },
   { verb: "designing", subject: "agent runtimes" },
-  { verb: "writing", subject: "production Next.js" },
+  { verb: "writing", subject: "Next.js" },
 ];
 
 const marqueeItems = [
@@ -152,10 +152,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-2 font-mono text-base text-foreground/85 sm:text-lg"
+            className="mt-6 flex flex-col gap-1 font-mono text-base text-foreground/85 sm:flex-row sm:items-baseline sm:gap-x-3 sm:text-lg"
           >
-            <span className="text-muted-foreground">→ currently</span>
-            <span className="inline-flex items-baseline">
+            <span className="shrink-0 text-muted-foreground">→ currently</span>
+            <span className="inline-flex min-h-[1.4em] items-baseline whitespace-nowrap">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={rotatingRoles[roleIdx].verb}
