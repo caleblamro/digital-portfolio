@@ -93,7 +93,7 @@ export function Hero() {
     <section
       ref={ref}
       onMouseMove={onMove}
-      className="relative overflow-hidden border-b border-border"
+      className="relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden border-b border-border"
     >
       <div
         aria-hidden
@@ -108,7 +108,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-32 top-32 -z-10 h-96 w-96 rounded-full bg-frost/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
 
-      <div className="container relative grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:py-24">
+      <div className="container relative grid flex-1 content-center gap-12 py-12 md:py-16 lg:grid-cols-12 lg:py-12">
         <div
           aria-hidden
           className="pointer-events-none absolute left-4 top-6 hidden select-none font-display text-[10rem] font-bold leading-none text-foreground/[0.025] sm:text-[14rem] lg:block"
