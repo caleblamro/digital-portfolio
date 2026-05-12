@@ -108,10 +108,10 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-32 top-32 -z-10 h-96 w-96 rounded-full bg-frost/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-0 -z-10 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
 
-      <div className="container relative grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:py-32">
+      <div className="container relative grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:py-24">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-4 top-12 hidden select-none font-display text-[10rem] font-bold leading-none text-foreground/[0.025] sm:text-[14rem] lg:block"
+          className="pointer-events-none absolute left-4 top-6 hidden select-none font-display text-[10rem] font-bold leading-none text-foreground/[0.025] sm:text-[14rem] lg:block"
         >
           01
         </div>
@@ -137,7 +137,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="mt-6 font-display text-[2.75rem] font-bold leading-[0.95] tracking-[-0.04em] text-balance sm:text-6xl md:text-[5rem] lg:text-[6.25rem]"
+            className="mt-5 font-display text-[2.5rem] font-bold leading-[0.95] tracking-[-0.04em] text-balance sm:text-5xl md:text-[4.25rem] lg:text-[5.25rem]"
           >
             <span className="block text-foreground">Caleb</span>
             <span className="block">
@@ -152,7 +152,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-2 font-mono text-base text-foreground/85 sm:text-lg"
+            className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-2 font-mono text-base text-foreground/85 sm:text-lg"
           >
             <span className="text-muted-foreground">→ currently</span>
             <span className="inline-flex items-baseline">
@@ -189,7 +189,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.24 }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base"
           >
             Full-stack engineer. Founder of{" "}
             <Link
@@ -212,7 +212,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.32 }}
-            className="mt-9 flex flex-wrap items-center gap-3"
+            className="mt-7 flex flex-wrap items-center gap-3"
           >
             <Button asChild size="lg">
               <Link href="/projects">
@@ -230,7 +230,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.42 }}
-            className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8"
+            className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-6"
           >
             {[
               { label: "Years shipping", value: "4+" },
@@ -241,7 +241,7 @@ export function Hero() {
                 <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                   {stat.label}
                 </dt>
-                <dd className="mt-1 font-display text-3xl font-bold tracking-tight">
+                <dd className="mt-1 font-display text-2xl font-bold tracking-tight">
                   {stat.value}
                 </dd>
               </div>
@@ -254,7 +254,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.18 }}
-            className="relative h-full min-h-[440px]"
+            className="relative h-full min-h-[400px]"
           >
             <LayeredCards currentQuarter={currentQuarter} />
           </motion.div>
