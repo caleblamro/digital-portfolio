@@ -18,13 +18,11 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden border-b border-border/60 py-20 md:py-24",
+        "border-b border-border py-24 md:py-28",
         className,
       )}
     >
-      <div className="absolute inset-0 -z-10 grid-pattern opacity-20 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
-      <div className="absolute left-1/2 top-0 -z-10 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
-      <div className="container">
+      <div className="container max-w-4xl">
         {eyebrow && (
           <p className="font-mono text-xs uppercase tracking-widest text-accent">
             {eyebrow}
@@ -34,7 +32,7 @@ export function PageHero({
           {title}
         </h1>
         {description && (
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {description}
           </p>
         )}

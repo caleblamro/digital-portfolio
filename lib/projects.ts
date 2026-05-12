@@ -27,10 +27,8 @@ export const projects: Project[] = [
     description:
       "AI-powered underwriting, deal-finding, and a metered public API for real-estate investors — a full Next.js product with live data, deterministic metrics, and Claude-written investment memos.",
     longDescription: [
-      "Doorline is a full-stack Next.js application that ingests live property data, runs a deterministic investment-metrics engine, layers an AI memo on top, and exposes the same pipeline to paying customers via a metered REST API.",
-      "Type an address and get cap rate, cash-on-cash, DSCR, a 30-year wealth projection, equity buildup, rent vs. sell comparison, comparable rents and sales, and a Claude-written investment memo with risks and opportunities. The deal finder lets you browse live for-sale listings filtered by city, zip, price, and beds, mapped on Mapbox with clustering.",
-      "An embedded AI assistant can run read-only SQL against the user's own data, fetch live property/market data, and emit chart specs that the UI renders inline. Tool outputs accumulate on a 'Live canvas' the user can save as a report.",
-      "The same pipeline is exposed via a public API metered through Stripe, with per-plan rate limits and a `/developer` console for key management, usage charts, and plan upgrades.",
+      "Type an address, get a full underwriting in seconds — cap rate, DSCR, 30-year wealth projection, comps, and a Claude-written investment memo. The deal finder maps live listings on Mapbox with clustering.",
+      "An embedded AI assistant runs read-only SQL on the user's portfolio, fetches live market data, and emits chart specs the UI renders inline. The same pipeline is exposed as a Stripe-metered public API.",
     ],
     role: "Sole founder & engineer",
     status: "live",
@@ -74,8 +72,8 @@ export const projects: Project[] = [
     description:
       "A platform that lets non-developers describe an app in plain English and watch it get built, deployed, and iterated on by AI agents.",
     longDescription: [
-      "Forge is Triforce Software's flagship product — a build-with-AI platform that compresses the time from idea to shipped app from weeks to minutes. Users describe what they want and an orchestrated set of Claude agents scaffold the app, wire up auth and a database, ship UI, and deploy.",
-      "The product is structured as a monorepo with a Next.js web app, a shared component system, and an agent runtime. Forge handles persistence, multi-user collaboration, and one-click preview deployments.",
+      "Describe what you want and a swarm of Claude agents scaffold the app, wire up auth and a database, ship UI, and deploy — compressing idea-to-app from weeks to minutes.",
+      "A Next.js monorepo with a shared component system, an agent runtime, multi-user collaboration, and one-click preview deployments.",
     ],
     role: "Founder, lead engineer",
     status: "live",
@@ -113,8 +111,8 @@ export const projects: Project[] = [
     description:
       "A native-feeling macOS app that scans your disk and renders a gorgeous, animated treemap so you can find the gigabytes eating your SSD.",
     longDescription: [
-      "Treemap is a desktop app for macOS that scans your filesystem and renders it as an interactive, animated treemap. Hover any rectangle to see its size, click to drill in, and watch the layout retile as you zoom — built with Electron, Vite, and a hand-tuned canvas renderer.",
-      "Treemap is shipped as a notarized DMG and the marketing site handles Stripe checkout and license-key delivery, all served from a Next.js storefront.",
+      "A macOS app that scans your filesystem and renders it as an interactive, animated treemap. Hover for size, click to drill in. Electron + Vite with a hand-tuned canvas renderer.",
+      "Shipped as a notarized DMG. Marketing site on Next.js handles Stripe checkout and license-key delivery.",
     ],
     role: "Sole founder & engineer",
     status: "live",
@@ -149,9 +147,9 @@ export const projects: Project[] = [
     title: "Triforce Software",
     tagline: "Custom software studio website",
     description:
-      "The marketing site, blog, and lead funnel for Triforce Software — a modern, SEO-optimized Next.js site with a custom design system and editorial blog.",
+      "Marketing site, blog, and lead funnel for Triforce Software.",
     longDescription: [
-      "Triforce Software is the company I founded to build modern, scalable software for businesses that need more than an off-the-shelf SaaS. The marketing site is a Next.js 16 app using @base-ui/react and a custom design system, with blog, careers, services, and contact funnels.",
+      "The company site I founded to build software for businesses that need more than off-the-shelf SaaS. Next.js 16 + @base-ui/react with a custom design system, blog, careers, services, and contact funnels.",
     ],
     role: "Founder",
     status: "live",
@@ -184,9 +182,9 @@ export const projects: Project[] = [
     title: "Online Provisioning Forms",
     tagline: "Internal form builder at Veritas Technologies",
     description:
-      "An internal provisioning form builder for the Enterprise Applications team at Veritas, setting the stage for multiple major process transformations.",
+      "Internal form builder for Veritas Enterprise Applications.",
     longDescription: [
-      "Working closely with the Enterprise Applications team at Veritas Technologies, I built an internal provisioning form builder used to set the stage for multiple major process transformations across the company.",
+      "An internal provisioning form-builder for Veritas's Enterprise Applications team. Set the stage for multiple major process transformations across the company.",
     ],
     role: "Software engineer",
     status: "shipped",
@@ -206,9 +204,9 @@ export const projects: Project[] = [
     title: "GTM Dashboard",
     tagline: "Global Trade Compliance order management",
     description:
-      "Replaced a legacy Java applet for managing orders being checked for global trade compliance, reducing latency and adding features that made order management materially more efficient.",
+      "Replaced a legacy Java applet for global-trade-compliance order management with a modern React UI.",
     longDescription: [
-      "For my first internship with Veritas, I transformed an existing Java applet used to manage orders being checked for global trade compliance. The replacement decreased latency and added features that made managing these orders much more efficient for the operations team.",
+      "Replaced the legacy Java applet used to manage orders being checked for global trade compliance. Cut latency and shipped features that made the workflow materially more efficient.",
     ],
     role: "Software engineering intern",
     status: "shipped",
@@ -228,9 +226,9 @@ export const projects: Project[] = [
     title: "Train GPT",
     tagline: "RAG over unstructured files",
     description:
-      "An open-source RAG application that translates unstructured files into GPT vector embeddings and performs similarity search to optimize the context handed to the LLM.",
+      "Open-source RAG over unstructured files via OpenAI + Pinecone.",
     longDescription: [
-      "Train GPT is a personal project built on top of OpenAI and open-source vector stores. It translates unstructured files (PDFs, docs, transcripts) into vector embeddings, runs a similarity search at query time, and uses the top-k context to ground a generated response.",
+      "Translates unstructured files (PDFs, docs, transcripts) into vector embeddings, runs similarity search at query time, and uses top-k context to ground the response.",
     ],
     role: "Personal project",
     status: "shipped",
@@ -251,9 +249,9 @@ export const projects: Project[] = [
     title: "AGILE Effort Logger",
     tagline: "AGILE management application — CSE 360",
     description:
-      "A team project for CSE 360 at ASU: an AGILE management application designed and built end-to-end with a five-person team against formal stakeholder requirements.",
+      "AGILE management app — ASU CSE 360, five-person team.",
     longDescription: [
-      "Studying the AGILE methodology during my CSE 360 course at ASU, my team of five was tasked with developing an application that met stakeholder requirements outlined in formal proposal documents.",
+      "Five-person team project for ASU's CSE 360 — built an AGILE management application against formal stakeholder requirements.",
     ],
     role: "Team member",
     status: "shipped",
@@ -274,9 +272,9 @@ export const projects: Project[] = [
     title: "Lexical Analyzer",
     tagline: "Thompson's construction in C++",
     description:
-      "A C++ lexer that parses tokens from a string given a regular expression — uses Thompson's construction to compile REGs to NFAs at runtime.",
+      "C++ lexer that compiles regex → NFA via Thompson's construction.",
     longDescription: [
-      "One key project for CSE 340 was writing a program that parses tokens from a string given a regular expression representing that token. Thompson's construction is used together with REGs generated at runtime to make this process clean and fast.",
+      "A C++ program that parses tokens from a string given a regular expression. Uses Thompson's construction to compile REGs to NFAs at runtime.",
     ],
     role: "Coursework",
     status: "shipped",

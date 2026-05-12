@@ -15,12 +15,12 @@ export const experiences: Experience[] = [
     period: "2024 — Present",
     location: "Arizona",
     summary:
-      "Founded a custom software studio that ships AI-first products. Lead engineering on Forge (build-with-AI platform), Doorline (real-estate investor terminal), and Treemap (macOS filesystem visualizer).",
+      "Custom software studio shipping AI-first products. Forge, Doorline, and Treemap.",
     highlights: [
-      "Built and shipped Forge — a build-with-AI platform that lets non-engineers describe an app and watch it get built, deployed, and iterated on.",
-      "Built Doorline end-to-end — a full-stack Next.js product with a deterministic investment-metrics engine, Claude-written memos, and a Stripe-metered public API.",
-      "Shipped Treemap, a notarized macOS app sold via Stripe with license-key delivery.",
-      "Designed every piece of company infrastructure: Dokploy on VPS, Postgres, Redis, Sentry, OpenPanel analytics, Better-Auth.",
+      "Built Forge — non-engineers describe an app, agents build and deploy it.",
+      "Built Doorline end-to-end — a Next.js investor terminal with a deterministic metrics engine and a Stripe-metered public API.",
+      "Shipped Treemap, a notarized macOS app sold via Stripe.",
+      "Designed every piece of company infrastructure end-to-end.",
     ],
     stack: [
       "Next.js",
@@ -39,19 +39,20 @@ export const experiences: Experience[] = [
   {
     company: "On Q Property Management",
     role: "Lead Software Engineer",
-    period: "2023 — Present",
+    period: "2025 — Present",
     location: "Scottsdale, AZ",
     summary:
-      "Leads software engineering at On Q. Built the shared platform every new product is built on, designed AI-driven automation that replaces manual operational work, owns the financial reporting infrastructure, and trains the leadership team on effective AI use.",
+      "Lead engineer. Built the shared platform every new product runs on, automated an ops role with AI, and train leadership on practical AI use.",
     highlights: [
-      "Designed and built the new software stack that every new product at On Q is built on — the shared foundation for auth, data access, observability, and deployment that the engineering team ships against today.",
-      "Automated an entire operations workflow end-to-end with AI that previously required a full-time employee to manage — preserving audit trails and freeing the headcount for higher-leverage work.",
-      "Owns the financial reporting infrastructure: replaced a fragile multi-day spreadsheet close with a typed, testable monthly-close pipeline that runs in minutes and reconciles against the ledger of record.",
-      "Designed and shipped an internal AI dev-agent platform — Strands-powered agents that spin up isolated Docker dev environments, make code changes from natural-language prompts, and auto-open pull requests. Sentry webhooks feed the agent loop so production errors can be triaged and patched without a human in the middle.",
-      "Cut AWS spend by migrating ML workloads from SageMaker to Bedrock — same capabilities, materially lower per-call cost, and simpler ops.",
-      "Led a production data migration from DynamoDB to MongoDB to unlock more flexible query patterns and reduce per-operation cost across the portfolio.",
-      "Trained the leadership team on how to use AI effectively in their day-to-day — practical playbooks, evaluation criteria, and hands-on practice for the patterns that move the needle.",
-      "Operates as tech lead across architecture review, hiring, and code review for the engineering group.",
+      "Built the shared platform every new product is built on — auth, data, observability, deploy.",
+      "Automated an entire operations role with AI, freeing the headcount for higher-leverage work.",
+      "Replaced a multi-day spreadsheet close with a typed monthly-close pipeline that runs in minutes.",
+      "Shipped an internal AI dev-agent platform — Strands agents spin up sandboxes and auto-open PRs from natural-language prompts.",
+      "Wired Sentry webhooks into the agent loop for production auto-remediation.",
+      "Cut AWS spend by migrating ML workloads from SageMaker to Bedrock.",
+      "Led a production data migration from DynamoDB to MongoDB.",
+      "Trained the leadership team on practical AI use — playbooks, evaluation, hands-on patterns.",
+      "Tech lead across architecture, hiring, and code review.",
     ],
     stack: [
       "Next.js",
@@ -76,13 +77,13 @@ export const experiences: Experience[] = [
     period: "2021 — 2023",
     location: "Mountain View, CA (Remote)",
     summary:
-      "Worked on the Enterprise Applications team building internal tooling that supported business-critical processes across the company.",
+      "Enterprise Applications team. Internal tooling for business-critical processes.",
     highlights: [
-      "Built the Online Provisioning Forms application — an internal form-builder that set the stage for multiple major process transformations.",
-      "Replaced the legacy GTM (Global Trade Management) Java applet with a modern React UI, reducing latency and improving the compliance-check workflow.",
-      "Integrated with internal Veritas systems for routing, approvals, and audit logging.",
+      "Built Online Provisioning Forms — an internal form-builder that set up major process transformations.",
+      "Replaced the legacy GTM Java applet with a modern React UI, cutting latency.",
+      "Integrated routing, approvals, and audit logging into internal systems.",
     ],
-    stack: ["Java", "ReactJS", "SQL", "Internal Veritas systems"],
+    stack: ["Java", "ReactJS", "SQL"],
   },
 ];
 
