@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# Caleb Lamoreaux — Digital Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Caleb Lamoreaux. Built with Next.js 15, shadcn/ui, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+pnpm install
+pnpm dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Open <http://localhost:3000>.
+
+## Stack
+
+- Next.js 15 (App Router)
+- React 19
+- shadcn/ui + Radix primitives
+- Tailwind CSS 3
+- Framer Motion
+- TypeScript
+
+## Structure
+
+- `app/` — App Router pages (home, projects, experience, contact)
+- `components/ui/` — shadcn/ui primitives
+- `components/` — page-level sections and composites
+- `lib/` — utilities and project data
+- `public/` — static assets and resume PDF

@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("/fonts/AnonymousPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("/fonts/AnonymousPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("/fonts/AnonymousPro-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("/fonts/AnonymousPro-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  /* Light / paper — Nord-inspired, warmed slightly for paper feel */
+  :root {
+    --background: 220 25% 96%;            /* warmer paper, brighter */
+    --foreground: 220 16% 22%;            /* Nord0/1 slate */
+    --card: 220 26% 98%;                  /* lighter than bg — sits as a printed card on paper */
+    --card-foreground: 220 16% 22%;
+    --popover: 220 26% 98%;
+    --popover-foreground: 220 16% 22%;
+    --primary: 220 16% 22%;
+    --primary-foreground: 220 26% 98%;
+    --secondary: 219 24% 92%;
+    --secondary-foreground: 220 17% 32%;
+    --muted: 219 22% 93%;
+    --muted-foreground: 220 17% 35%;
+    --accent: 213 32% 52%;                 /* Nord10 #5E81AC */
+    --accent-foreground: 220 26% 98%;
+    --accent-soft: 193 43% 67%;            /* Nord8 #88C0D0 */
+    --frost: 179 25% 65%;                  /* Nord7 #8FBCBB */
+    --destructive: 354 42% 56%;            /* Nord11 */
+    --destructive-foreground: 220 26% 98%;
+    --border: 219 20% 86%;
+    --input: 219 20% 86%;
+    --ring: 213 32% 52%;
+    --radius: 0.5rem;
+
+    --paper-r: 243;
+    --paper-g: 245;
+    --paper-b: 249;
+  }
+
+  /* Dark — Nord polar night */
+  .dark {
+    --background: 220 16% 22%;            /* Nord0 #2E3440 */
+    --foreground: 219 28% 88%;            /* Nord5 #E5E9F0 */
+    --card: 222 16% 26%;                  /* slightly lifted from bg */
+    --card-foreground: 219 28% 88%;
+    --popover: 222 16% 26%;
+    --popover-foreground: 219 28% 88%;
+    --primary: 219 28% 88%;
+    --primary-foreground: 220 16% 22%;
+    --secondary: 222 14% 31%;             /* Nord2 #434C5E */
+    --secondary-foreground: 219 28% 88%;
+    --muted: 222 14% 31%;
+    --muted-foreground: 218 27% 75%;
+    --accent: 193 43% 67%;                /* Nord8 frost in dark */
+    --accent-foreground: 220 16% 22%;
+    --accent-soft: 213 32% 52%;
+    --frost: 179 25% 65%;
+    --destructive: 354 42% 56%;
+    --destructive-foreground: 218 27% 97%;
+    --border: 220 15% 36%;
+    --input: 220 15% 36%;
+    --ring: 193 43% 67%;
+
+    --paper-r: 46;
+    --paper-g: 52;
+    --paper-b: 64;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Paper texture — extremely subtle fibrous noise */
+  .paper-texture {
+    background-color: rgb(var(--paper-r) var(--paper-g) var(--paper-b));
+    background-image:
+      radial-gradient(
+        ellipse at top left,
+        hsl(var(--accent) / 0.06),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        hsl(var(--frost) / 0.06),
+        transparent 60%
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--accent)) 100%
+    );
+  }
+
+  .accent-underline {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent) / 0.4),
+      hsl(var(--frost) / 0.4)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.35em;
+    background-position: 0 88%;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(
+      hsl(var(--border)) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  .rule-lines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      hsl(var(--border) / 0.4) 31px,
+      hsl(var(--border) / 0.4) 32px
+    );
+  }
+
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  .caret {
+    animation: blink 1.05s steps(1, end) infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    animation: marquee 36s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
