@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StatusPill } from "@/components/status-pill";
+import { VisitSiteLink } from "@/components/visit-site-link";
 import { featuredProjects } from "@/lib/projects";
 
 export function FeaturedProjects() {
@@ -71,16 +72,9 @@ export function FeaturedProjects() {
                     )}
                   </div>
                   {project.href && (
-                    <a
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="relative z-10 mt-4 inline-flex w-fit items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground transition-colors hover:text-accent cursor-pointer"
-                    >
-                      <ExternalLink className="h-3 w-3" />
-                      Visit site
-                    </a>
+                    <div className="mt-4">
+                      <VisitSiteLink href={project.href} />
+                    </div>
                   )}
                 </div>
               </Link>
