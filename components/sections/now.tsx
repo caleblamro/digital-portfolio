@@ -17,7 +17,7 @@ const items = [
     icon: Sparkles,
     label: "Building",
     title: "Triforce Software",
-    description: "Founder. Shipping Forge, Doorline, and Treemap.",
+    description: "Founder. Shipping Forge, Doorline, and Brink.",
     href: "/projects",
   },
   {

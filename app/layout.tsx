@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Full-stack developer",
     "Doorline",
     "Forge",
-    "Treemap",
+    "Brink",
   ],
   authors: [{ name: "Caleb Lamoreaux" }],
   creator: "Caleb Lamoreaux",

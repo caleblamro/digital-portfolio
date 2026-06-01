@@ -297,10 +297,10 @@ function LayeredCards({ currentQuarter }: { currentQuarter: string | null }) {
           <span className="font-display text-xs text-frost">→</span>
         </div>
         <h3 className="mt-3 font-display text-xl font-bold leading-tight">
-          Treemap
+          Doorline
         </h3>
         <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-          Beautiful macOS filesystem visualizer. Shipped via Stripe.
+          The investor&apos;s terminal for US residential rentals.
         </p>
       </motion.div>
 
@@ -356,14 +356,14 @@ function LayeredCards({ currentQuarter }: { currentQuarter: string | null }) {
         </div>
         <p className="mt-3 font-display text-lg font-bold leading-tight">
           <Link
-            href="/projects/doorline"
+            href="/projects/brink"
             className="accent-underline transition hover:text-accent"
           >
-            Doorline
+            Brink
           </Link>
         </p>
         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-          The investor&apos;s terminal for US residential rentals.
+          Continuous adversarial security testing for SaaS apps.
         </p>
       </motion.div>
 
