@@ -12,6 +12,7 @@ export type Project = {
   org: "Triforce" | "Veritas" | "Personal" | "ASU";
   featured?: boolean;
   href?: string;
+  downloadHref?: string;
   repo?: string;
   stack: string[];
   highlights: { label: string; value: string }[];
@@ -184,6 +185,49 @@ export const projects: Project[] = [
       "Attack success rate evaluation harness",
     ],
     badge: "BK",
+  },
+  {
+    slug: "cineit",
+    title: "CineIt",
+    tagline: "Letterboxd, but for TV and movies",
+    description:
+      "A watch diary for TV and film — log every episode, rate at the episode level with half-stars, build a watchlist, and follow friends through a spoiler-free feed.",
+    longDescription: [
+      "CineIt is a cross-platform watch diary built for people who actually finish the season. Track shows and movies in one library, mark episodes as you watch, and pick up exactly where you left off on any device.",
+      "Ratings work episode-by-episode with half-star granularity, so your taste is captured at the resolution it actually exists at. A spoiler-free social feed surfaces friend activity without ever ruining a finale, and the interface is tuned for both light and dark viewing rooms across iOS, Android, and web.",
+    ],
+    role: "Founder & lead engineer",
+    status: "live",
+    year: "2026",
+    org: "Triforce",
+    featured: true,
+    href: "https://cineit.triforce-software.com",
+    downloadHref: "https://apps.apple.com/app/id6769514050",
+    stack: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Next.js",
+      "Hono",
+      "tRPC",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Better Auth",
+    ],
+    highlights: [
+      { label: "Rating step", value: "0.5★ per episode" },
+      { label: "Platforms", value: "iOS · Android · Web" },
+      { label: "Price", value: "Free forever" },
+    ],
+    features: [
+      "Track shows and movies in one unified library",
+      "Episode-by-episode ratings with half-star granularity",
+      "Smart watchlist with long-press quick actions",
+      "Continue watching across seasons and devices",
+      "Spoiler-free friend activity feed",
+      "Tuned light and dark themes across every platform",
+    ],
+    badge: "CI",
   },
   {
     slug: "online-provisioning-forms",

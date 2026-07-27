@@ -5,6 +5,7 @@ import {
   ArrowLeft,
   ArrowUpRight,
   CheckCircle2,
+  Download,
   ExternalLink,
   Github,
 } from "lucide-react";
@@ -94,6 +95,17 @@ export default async function ProjectPage({
                       rel="noreferrer"
                     >
                       Visit site <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                )}
+                {project.downloadHref && (
+                  <Button asChild variant="outline" size="lg">
+                    <a
+                      href={project.downloadHref}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Download className="h-4 w-4" /> Download app
                     </a>
                   </Button>
                 )}
