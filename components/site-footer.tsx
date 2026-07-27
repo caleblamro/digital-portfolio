@@ -54,7 +54,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="/files/Resume.pdf"
+                  href="/files/Caleb-Lamoreaux-Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="text-foreground/80 transition-colors hover:text-accent"

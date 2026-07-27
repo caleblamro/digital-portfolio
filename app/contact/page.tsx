@@ -35,7 +35,7 @@ const secondary = [
     icon: FileText,
     label: "Résumé",
     value: "Download PDF",
-    href: "/files/Resume.pdf",
+    href: "/files/Caleb-Lamoreaux-Resume.pdf",
   },
 ];
 

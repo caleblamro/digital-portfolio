@@ -147,7 +147,7 @@ export function SiteHeader() {
             />
             <ThemeToggle />
             <Button asChild size="sm" className="ml-1.5">
-              <a href="/files/Resume.pdf" target="_blank" rel="noreferrer">
+              <a href="/files/Caleb-Lamoreaux-Resume.pdf" target="_blank" rel="noreferrer">
                 <FileText className="h-3.5 w-3.5" />
                 Résumé
                 <ArrowRight className="h-3 w-3" />
@@ -242,7 +242,7 @@ export function SiteHeader() {
                   />
                 </div>
                 <Button asChild size="lg" className="w-full">
-                  <a href="/files/Resume.pdf" target="_blank" rel="noreferrer">
+                  <a href="/files/Caleb-Lamoreaux-Resume.pdf" target="_blank" rel="noreferrer">
                     <FileText className="h-4 w-4" /> Download résumé
                     <ArrowRight className="h-4 w-4" />
                   </a>

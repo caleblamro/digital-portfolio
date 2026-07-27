@@ -101,7 +101,7 @@ export default function ExperiencePage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg">
-                <a href="/files/Resume.pdf" target="_blank" rel="noreferrer">
+                <a href="/files/Caleb-Lamoreaux-Resume.pdf" target="_blank" rel="noreferrer">
                   Download résumé
                 </a>
               </Button>
