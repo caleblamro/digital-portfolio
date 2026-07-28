@@ -41,7 +41,7 @@ export function FeaturedProjects() {
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_60px_-30px_hsl(var(--accent)/0.35)] cursor-pointer"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 motion-safe:hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-[0_12px_40px_-20px_hsl(var(--accent)/0.3)] cursor-pointer"
               >
                 <div className="flex items-start justify-between border-b border-border/80 pb-4">
                   <StatusPill status={project.status} />
