@@ -14,7 +14,8 @@ const nav = [
   { href: "/", num: "01", label: "Home" },
   { href: "/projects", num: "02", label: "Projects" },
   { href: "/experience", num: "03", label: "Experience" },
-  { href: "/contact", num: "04", label: "Contact" },
+  { href: "/uses", num: "04", label: "Uses" },
+  { href: "/contact", num: "05", label: "Contact" },
 ];
 
 function isActive(pathname: string, href: string) {
