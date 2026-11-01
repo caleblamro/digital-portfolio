@@ -1,7 +1,7 @@
 # Production image for Dokploy. Replaces the Nixpacks build, which shipped
 # Node 18 (EOL); node:22-alpine tracks the patched Node 22 line.
 
-FROM node:22-alpine AS base
+FROM node:26-alpine AS base
 RUN corepack enable && corepack prepare pnpm@10.18.2 --activate
 WORKDIR /app
 
@@ -15,7 +15,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN pnpm run build
 
-FROM node:22-alpine AS runtime
+FROM node:26-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
