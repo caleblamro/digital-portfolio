@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/projects/triforce-software",
+        destination: "/projects/saguaro-technology",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

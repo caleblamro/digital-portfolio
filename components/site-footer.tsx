@@ -17,7 +17,7 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Full-stack engineer. Founder of Triforce Software, lead engineer
+              Full-stack engineer. Founder of Saguaro Technology, lead engineer
               at On Q Property Management. Building AI-first products that
               ship.
             </p>

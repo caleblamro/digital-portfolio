@@ -24,9 +24,10 @@ export const metadata: Metadata = {
     template: "%s — Caleb Lamoreaux",
   },
   description:
-    "Full-stack engineer, founder of Triforce Software, and lead engineer at On Q Property Management. I ship AI-first products and modern web platforms end-to-end.",
+    "Full-stack engineer, founder of Saguaro Technology, and lead engineer at On Q Property Management. I ship AI-first products and modern web platforms end-to-end.",
   keywords: [
     "Caleb Lamoreaux",
+    "Saguaro Technology",
     "Triforce Software",
     "On Q Property Management",
     "Next.js",
@@ -46,13 +47,13 @@ export const metadata: Metadata = {
     siteName: "Caleb Lamoreaux",
     title: "Caleb Lamoreaux — Full-Stack Engineer & Founder",
     description:
-      "Full-stack engineer, founder of Triforce Software, and lead engineer at On Q Property Management.",
+      "Full-stack engineer, founder of Saguaro Technology, and lead engineer at On Q Property Management.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Caleb Lamoreaux — Full-Stack Engineer & Founder",
     description:
-      "Full-stack engineer, founder of Triforce Software, and lead engineer at On Q Property Management.",
+      "Full-stack engineer, founder of Saguaro Technology, and lead engineer at On Q Property Management.",
   },
   manifest: "/site.webmanifest",
   icons: {

@@ -179,10 +179,10 @@ export function Hero() {
           >
             Full-stack engineer. Founder of{" "}
             <Link
-              href="/projects/triforce-software"
+              href="/projects/saguaro-technology"
               className="text-foreground accent-underline transition hover:text-accent"
             >
-              Triforce Software
+              Saguaro Technology
             </Link>
             , lead engineer at{" "}
             <Link
@@ -278,7 +278,7 @@ function LayeredCards() {
       >
         <div className="flex items-center justify-between">
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            TRIFORCE · RETIRED
+            SAGUARO · RETIRED
           </span>
           <span className="font-display text-xs text-frost">→</span>
         </div>
@@ -318,7 +318,7 @@ function LayeredCards() {
             {"\n"}  <span className="text-accent">leading</span>:{" "}
             <span className="text-nord-14">&apos;On Q engineering&apos;</span>,
             {"\n"}  <span className="text-accent">founder_of</span>:{" "}
-            <span className="text-nord-14">&apos;Triforce&apos;</span>
+            <span className="text-nord-14">&apos;Saguaro Technology&apos;</span>
             {"\n"}
             {"}"};
           </code>

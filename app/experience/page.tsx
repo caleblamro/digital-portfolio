@@ -14,7 +14,7 @@ import { experiences } from "@/lib/experience";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Triforce Software, On Q Property Management, Veritas.",
+  description: "Saguaro Technology, On Q Property Management, Veritas.",
 };
 
 export default function ExperiencePage() {

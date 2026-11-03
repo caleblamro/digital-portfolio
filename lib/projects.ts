@@ -16,7 +16,7 @@ export type Project = {
   role: string;
   status: ProjectStatus;
   year: string;
-  org: "Triforce" | "Veritas" | "Personal" | "ASU";
+  org: "Saguaro Technology" | "Veritas" | "Personal" | "ASU";
   featured?: boolean;
   href?: string;
   /** Recorded walkthrough for products that are no longer running. */
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     role: "Sole founder & engineer",
     status: "archived",
     year: "2025",
-    org: "Triforce",
+    org: "Saguaro Technology",
     featured: true,
     demo: {
       video: "/videos/doorline.mp4",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   {
     slug: "forge",
     title: "Forge",
-    tagline: "Build apps with AI — Triforce's flagship product",
+    tagline: "Build apps with AI — Saguaro Technology's flagship product",
     description:
       "A platform that lets non-developers describe an app in plain English and watch it get built, deployed, and iterated on by AI agents.",
     longDescription: [
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     role: "Founder, lead engineer",
     status: "archived",
     year: "2025",
-    org: "Triforce",
+    org: "Saguaro Technology",
     featured: true,
     demo: {
       video: "/videos/forge.mp4",
@@ -125,18 +125,18 @@ export const projects: Project[] = [
     badge: "FG",
   },
   {
-    slug: "triforce-software",
-    title: "Triforce Software",
+    slug: "saguaro-technology",
+    title: "Saguaro Technology",
     tagline: "Custom software studio website",
     description:
-      "Marketing site, blog, and lead funnel for Triforce Software.",
+      "Marketing site, blog, and lead funnel for Saguaro Technology.",
     longDescription: [
       "The company site I founded to build software for businesses that need more than off-the-shelf SaaS. Next.js 16 + @base-ui/react with a custom design system, blog, careers, services, and contact funnels.",
     ],
     role: "Founder",
     status: "live",
     year: "2025",
-    org: "Triforce",
+    org: "Saguaro Technology",
     featured: true,
     href: "https://triforce-software.com",
     stack: [
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       "SEO-optimized with Open Graph and sitemap",
       "Custom typography and motion design",
     ],
-    badge: "TF",
+    badge: "ST",
   },
   {
     slug: "brink",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     role: "Founder & lead engineer",
     status: "archived",
     year: "2026",
-    org: "Triforce",
+    org: "Saguaro Technology",
     featured: true,
     demo: {
       video: "/videos/brink.mp4",
@@ -223,7 +223,7 @@ export const projects: Project[] = [
     role: "Founder & lead engineer",
     status: "live",
     year: "2026",
-    org: "Triforce",
+    org: "Saguaro Technology",
     featured: true,
     href: "https://cineit.triforce-software.com",
     downloadHref: "https://apps.apple.com/app/id6769514050",

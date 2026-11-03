@@ -10,7 +10,7 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    company: "Triforce Software",
+    company: "Saguaro Technology (formerly Triforce Software)",
     role: "Founder & Lead Engineer",
     period: "2024 — Present",
     location: "Arizona",
