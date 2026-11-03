@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StatusPill } from "@/components/status-pill";
+import { DemoLabel } from "@/components/demo-label";
 import { VisitSiteLink } from "@/components/visit-site-link";
 import { featuredProjects } from "@/lib/projects";
 
@@ -74,6 +75,11 @@ export function FeaturedProjects() {
                   {project.href && (
                     <div className="mt-4">
                       <VisitSiteLink href={project.href} />
+                    </div>
+                  )}
+                  {project.demo && (
+                    <div className="mt-4">
+                      <DemoLabel />
                     </div>
                   )}
                 </div>

@@ -1,5 +1,12 @@
 export type ProjectStatus = "live" | "in-development" | "shipped" | "archived";
 
+export type ProjectDemo = {
+  video: string;
+  loop: string;
+  poster: string;
+  duration: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -12,6 +19,8 @@ export type Project = {
   org: "Triforce" | "Veritas" | "Personal" | "ASU";
   featured?: boolean;
   href?: string;
+  /** Recorded walkthrough for products that are no longer running. */
+  demo?: ProjectDemo;
   downloadHref?: string;
   repo?: string;
   stack: string[];
@@ -32,11 +41,16 @@ export const projects: Project[] = [
       "An embedded AI assistant runs read-only SQL on the user's portfolio, fetches live market data, and emits chart specs the UI renders inline. The same pipeline is exposed as a Stripe-metered public API.",
     ],
     role: "Sole founder & engineer",
-    status: "live",
+    status: "archived",
     year: "2025",
     org: "Triforce",
     featured: true,
-    href: "https://doorline.triforce-software.com",
+    demo: {
+      video: "/videos/doorline.mp4",
+      loop: "/videos/doorline-loop.mp4",
+      poster: "/videos/doorline-poster.jpg",
+      duration: "1:37",
+    },
     stack: [
       "Next.js 16",
       "React 19",
@@ -77,11 +91,16 @@ export const projects: Project[] = [
       "A Next.js monorepo with a shared component system, an agent runtime, multi-user collaboration, and one-click preview deployments.",
     ],
     role: "Founder, lead engineer",
-    status: "live",
+    status: "archived",
     year: "2025",
     org: "Triforce",
     featured: true,
-    href: "https://forge.triforce-software.com",
+    demo: {
+      video: "/videos/forge.mp4",
+      loop: "/videos/forge-loop.mp4",
+      poster: "/videos/forge-poster.jpg",
+      duration: "1:50",
+    },
     stack: [
       "Next.js",
       "React 19",
@@ -151,11 +170,16 @@ export const projects: Project[] = [
       "A TypeScript monorepo powered by Turborepo — Next.js dashboard, Hono API with tRPC, Inngest for durable agent orchestration, sandboxed runtimes via E2B, and browser-using agents via Browserbase.",
     ],
     role: "Founder & lead engineer",
-    status: "in-development",
+    status: "archived",
     year: "2026",
     org: "Triforce",
     featured: true,
-    href: "https://usebrink.com",
+    demo: {
+      video: "/videos/brink.mp4",
+      loop: "/videos/brink-loop.mp4",
+      poster: "/videos/brink-poster.jpg",
+      duration: "1:23",
+    },
     stack: [
       "Next.js",
       "TypeScript",

@@ -9,9 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const rotatingRoles = [
-  { verb: "building", subject: "Doorline" },
   { verb: "leading", subject: "On Q engineering" },
-  { verb: "shipping", subject: "Forge" },
   { verb: "designing", subject: "agent runtimes" },
   { verb: "writing", subject: "Next.js" },
 ];
@@ -35,13 +33,6 @@ const marqueeItems = [
   "Sentry",
 ];
 
-function getCurrentQuarter(now = new Date()) {
-  return {
-    q: Math.floor(now.getMonth() / 3) + 1,
-    year: now.getFullYear(),
-  };
-}
-
 function getNextQuarter(now = new Date()) {
   const q = Math.floor(now.getMonth() / 3) + 1;
   const isQ4 = q === 4;
@@ -57,15 +48,10 @@ export function Hero() {
   const ref = React.useRef<HTMLDivElement>(null);
   const [mouse, setMouse] = React.useState({ x: 0.5, y: 0.3 });
   const [nextQuarter, setNextQuarter] = React.useState<string | null>(null);
-  const [currentQuarter, setCurrentQuarter] = React.useState<string | null>(
-    null,
-  );
 
   React.useEffect(() => {
     const next = getNextQuarter();
-    const current = getCurrentQuarter();
     setNextQuarter(`Q${next.q} ${next.year}`);
-    setCurrentQuarter(`Q${current.q} · ${current.year}`);
   }, []);
 
   React.useEffect(() => {
@@ -234,7 +220,7 @@ export function Hero() {
           >
             {[
               { label: "Years shipping", value: "4+" },
-              { label: "Products live", value: "5" },
+              { label: "Products shipped", value: "5" },
               { label: "Companies built", value: "1" },
             ].map((stat) => (
               <div key={stat.label}>
@@ -256,7 +242,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.18 }}
             className="relative h-full min-h-[400px]"
           >
-            <LayeredCards currentQuarter={currentQuarter} />
+            <LayeredCards />
           </motion.div>
         </div>
       </div>
@@ -281,7 +267,7 @@ export function Hero() {
   );
 }
 
-function LayeredCards({ currentQuarter }: { currentQuarter: string | null }) {
+function LayeredCards() {
   return (
     <div className="relative h-full">
       <motion.div
@@ -292,7 +278,7 @@ function LayeredCards({ currentQuarter }: { currentQuarter: string | null }) {
       >
         <div className="flex items-center justify-between">
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            TRIFORCE · LIVE
+            TRIFORCE · RETIRED
           </span>
           <span className="font-display text-xs text-frost">→</span>
         </div>
@@ -351,19 +337,19 @@ function LayeredCards({ currentQuarter }: { currentQuarter: string | null }) {
             Now playing
           </span>
           <Badge variant="muted" className="font-mono text-[9px]">
-            {currentQuarter ?? ""}
+            Demo · 1:23
           </Badge>
         </div>
         <p className="mt-3 font-display text-lg font-bold leading-tight">
           <Link
-            href="/projects/brink"
+            href="/projects/brink#demo"
             className="accent-underline transition hover:text-accent"
           >
             Brink
           </Link>
         </p>
         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-          Continuous adversarial security testing for SaaS apps.
+          AI agents breaking into SaaS apps, recorded before it retired.
         </p>
       </motion.div>
 

@@ -17,7 +17,7 @@ const items = [
     icon: Sparkles,
     label: "Building",
     title: "Triforce Software",
-    description: "Founder. Shipping Forge, Doorline, and Brink.",
+    description: "Founder. Forge, Doorline, and Brink are retired; their demos are on the projects page.",
     href: "/projects",
   },
   {
