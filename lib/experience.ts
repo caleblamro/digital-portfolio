@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     period: "2024 — Present",
     location: "Arizona",
     summary:
-      "Custom software studio shipping AI-first products. Forge, Doorline, and Brink.",
+      "Custom software studio that shipped AI-first products: Forge, Doorline, and Brink, now retired with recorded demos.",
     highlights: [
       "Built Forge — non-engineers describe an app, agents build and deploy it.",
       "Built Doorline end-to-end — a Next.js investor terminal with a deterministic metrics engine and a Stripe-metered public API.",

@@ -8,8 +8,10 @@ import {
   Download,
   ExternalLink,
   Github,
+  PlayCircle,
 } from "lucide-react";
 
+import { DemoVideo } from "@/components/demo-video";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -98,6 +100,13 @@ export default async function ProjectPage({
                     </a>
                   </Button>
                 )}
+                {project.demo && (
+                  <Button asChild size="lg">
+                    <a href="#demo">
+                      <PlayCircle className="h-4 w-4" /> Watch the demo
+                    </a>
+                  </Button>
+                )}
                 {project.downloadHref && (
                   <Button asChild variant="outline" size="lg">
                     <a
@@ -161,6 +170,23 @@ export default async function ProjectPage({
           </div>
         </div>
       </section>
+
+      {project.demo && (
+        <section id="demo" className="scroll-mt-24 border-b border-border py-16">
+          <div className="container">
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">
+              / demo
+            </p>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {project.title} is retired. This walkthrough was recorded before
+              it went offline.
+            </p>
+            <div className="mt-8">
+              <DemoVideo demo={project.demo} title={project.title} />
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="border-b border-border py-16">
         <div className="container grid gap-12 lg:grid-cols-12">

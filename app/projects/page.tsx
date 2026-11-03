@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Badge } from "@/components/ui/badge";
 import { StatusPill } from "@/components/status-pill";
+import { DemoLabel } from "@/components/demo-label";
 import { VisitSiteLink } from "@/components/visit-site-link";
 import { projects } from "@/lib/projects";
 
@@ -97,6 +98,11 @@ export default function ProjectsPage() {
                       {project.href && (
                         <div className="mt-4">
                           <VisitSiteLink href={project.href} />
+                        </div>
+                      )}
+                      {project.demo && (
+                        <div className="mt-4">
+                          <DemoLabel />
                         </div>
                       )}
                     </div>
