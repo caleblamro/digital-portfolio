@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   const grouped: Record<string, typeof projects> = {
-    Triforce: projects.filter((p) => p.org === "Triforce"),
+    "Saguaro Technology": projects.filter((p) => p.org === "Saguaro Technology"),
     Veritas: projects.filter((p) => p.org === "Veritas"),
     Personal: projects.filter((p) => p.org === "Personal"),
     ASU: projects.filter((p) => p.org === "ASU"),

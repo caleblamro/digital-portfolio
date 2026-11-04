@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export const alt =
-  "Caleb Lamoreaux — Full-stack engineer & founder of Triforce Software";
+  "Caleb Lamoreaux — Full-stack engineer & founder of Saguaro Technology";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -189,7 +189,7 @@ export default async function OpengraphImage() {
             display: "flex",
           }}
         >
-          Full-stack engineer. Founder of Triforce Software. Lead engineer at On
+          Full-stack engineer. Founder of Saguaro Technology. Lead engineer at On
           Q Property Management.
         </div>
 
