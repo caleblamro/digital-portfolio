@@ -138,7 +138,7 @@ export const projects: Project[] = [
     year: "2025",
     org: "Saguaro Technology",
     featured: true,
-    href: "https://triforce-software.com",
+    href: "https://saguarotechnology.com",
     stack: [
       "Next.js 16",
       "React 19",
