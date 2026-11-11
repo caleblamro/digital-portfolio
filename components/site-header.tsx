@@ -8,6 +8,7 @@ import { ArrowRight, FileText, Github, Linkedin, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AvailabilityBadge } from "@/components/availability-badge";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -135,6 +136,7 @@ export function SiteHeader() {
 
           {/* Actions */}
           <div className="ml-auto hidden items-center gap-0.5 md:flex">
+            <AvailabilityBadge />
             <IconLink
               href="https://github.com/caleblamro"
               label="GitHub"
