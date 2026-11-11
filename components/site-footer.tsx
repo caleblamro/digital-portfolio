@@ -57,7 +57,7 @@ export function SiteFooter() {
                   href="/files/Caleb-Lamoreaux-Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-foreground/80 transition-colors hover:text-accent"
+                  className="rounded-sm text-foreground/80 ring-offset-background transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   Resume (PDF)
                 </a>

@@ -99,7 +99,7 @@ export default function ContactPage() {
                   href={c.href}
                   target={external ? "_blank" : undefined}
                   rel={external ? "noreferrer" : undefined}
-                  className="group flex items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 cursor-pointer"
+                  className="group flex items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4 ring-offset-background transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <Icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
